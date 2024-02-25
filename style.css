@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #ffafcc, #fefae0);
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.calculator {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgb(187, 130, 130);
+    background-color: white;
+}
+
+button#clear {
+    background-color:coral;
+    color: black;
+
+}
+
+.btn-number {
+    background-color: #a9def9;
+    color: black;
+}
+
+.btn-operator {
+    background-color: #e4c1f9;
+    color: coral;
+}
+
+.btn-equal {
+    background-color: #fefae0;
+    color: black;
+    height: 130px;
+    border-radius: 30%;
+}
+
+#display {
+    color: black;
+    margin: 0 10px;
+    height: 120px;
+    width: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+
+
+.theme-toggler {
+    color: white;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 1;
+    &::before {
+        position: absolute;
+        content: '' ;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: #333;
+        z-index: 1;
+    }
+
+}
+
+.theme-toggler .active {
+    color: #333;
+    &::before {
+        background-color: hwb(52 14% 28%);
+    }
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 50%;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+    &:hover {
+        transform: scale(1.1);
+    }
+
+}
+
+
+/* 
+DARK THEME */
+
+
+.dark {
+    background-color:  #22223b;
+    #display {
+        color: white;
+    }
+    #clear{
+        background-color: #118ab2;
+        color: white;
+    }
+    .btn-number {
+        background-color: #8EFDA6;
+        color: black;
+        font-weight: 600;
+    }
+    .btn-operator {
+        background-color: #ffd166 ;
+        color: #032b43;
+    }
+}
